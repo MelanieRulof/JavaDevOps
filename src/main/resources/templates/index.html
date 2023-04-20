@@ -9,14 +9,14 @@
 <body>
 	<h2>Accueil DevOps-Java</h2>
 	<div>
-		<form th:action="@{/returnName}" method="POST">
-			Name : <input type="text" th:field="${name}" /> <br /> <br /> 
+		<form th:action="@{/returnName}" th:object="${person}" method="POST">
+			Name : <input type="text" th:field="*{name}" /> <br /> <br /> 
 			<input	type="submit" value="Send and Submit" />
 		</form>
 	</div>
 	
 	<div>
-		<p th:text="${message}"></p>
+		<p>Bonjour <span th:text="${person.name}" th:style="${person}?'display:inline':'display:none'"> </span> vous êtes bien matinal</p>
 	</div>
 	
 </body>
