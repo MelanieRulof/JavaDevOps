@@ -1,20 +1,19 @@
 pipeline {
     agent any
-
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh '/home/isika/JavaDevOps.git/JavaDevOps/mvnw clean package'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh '/home/isika/JavaDevOps.git/JavaDevOps/mvnw test'
             }
         }
-        stage('Deploy') {
+        stage('Archive') {
             steps {
-                echo 'Deploying....'
+                archiveArtifacts 'target/*.jar'
             }
         }
     }
