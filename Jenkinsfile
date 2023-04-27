@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh './mvnw clean package'
+                sh './mvnw'
             }
         }
         stage('Test') {
             steps {
-                sh './mvnw test'
+                sh 'test'
             }
         }
         stage('Archive') {
