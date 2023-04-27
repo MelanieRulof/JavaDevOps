@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '/home/isika/JavaDevOps.git/JavaDevOps/mvnw clean package'
+                sh './mvnw clean package'
             }
         }
         stage('Test') {
             steps {
-                sh '/home/isika/JavaDevOps.git/JavaDevOps/mvnw test'
+                sh './mvnw test'
             }
         }
         stage('Archive') {
