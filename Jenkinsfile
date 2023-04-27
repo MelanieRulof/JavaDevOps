@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'maven'
+                sh 'mvn install'
             }
         }
         stage('Test') {
             steps {
-                sh 'test'
+                sh 'mvn test'
             }
         }
         stage('Archive') {
