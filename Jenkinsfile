@@ -37,8 +37,8 @@ pipeline {
                 sh 'docker push demonshrous/docker-java-devops'
             }
         }
-	 stage('Deployment'){
-		 steps {
-			 buildjob: "JavaDeploy", wait : true
-    }
+	 //stage('Deployment'){
+		// steps {
+			// buildjob: "JavaDeploy", wait : true
+   // }
 }
