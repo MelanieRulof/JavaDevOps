@@ -7,7 +7,7 @@ pipeline {
     }
 
   stages {
-        stage('Build, Test and Package') {
+        stage('Test') {
             steps {
                 // Run Maven on a Unix agent.
 				sh "mvn test"
