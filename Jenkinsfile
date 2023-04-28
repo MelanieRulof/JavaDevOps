@@ -42,3 +42,4 @@ pipeline {
 			// buildjob: "JavaDeploy", wait : true
    // }
 }
+}
