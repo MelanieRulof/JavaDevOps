@@ -13,7 +13,7 @@ class DemoApplicationTests {
 	void createNewPerson() {
 		Person person = new Person();
 		person.setName("Bob");
-		Assertions.assertEquals("Bobo", person.getName());
+		Assertions.assertEquals("Bob", person.getName());
 	}
 
 }
