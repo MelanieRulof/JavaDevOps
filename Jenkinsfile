@@ -15,7 +15,7 @@ pipeline {
             post {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
-                always {
+                success {
                     junit (
                         allowEmptyResults:true,
                         testResults: '*test-reports/.xml'
