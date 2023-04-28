@@ -27,14 +27,17 @@ pipeline {
         }
         stage('Build Docker image') {
             steps {
-                sh 'docker build -f Dockerfile-java-v2 -t demonshrous/docker-java-devops:pipeline .'
+                sh 'docker build -f Dockerfile-java-v2 -t melanierulof2/javadocker:pipeline .'
             }
         }
         stage('Push image on Docker registry') {
             steps {
-                sh 'docker login -u demonshrous -p IsikaAL21'
-                sh 'docker push demonshrous/docker-java-devops:pipeline'
+                sh 'docker login -u melanierulof2 -p IsikaAL21'
+                sh 'docker push melanierulof2/javadocker:pipeline'
             }
         }
+	 stage('Trigger childjob'){
+		  steps {
+		  buildjob: "JavaDeploy", wait : true
     }
 }
