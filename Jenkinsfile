@@ -5,12 +5,12 @@ pipeline {
         // Install the Maven version configured as "maven" and add it to the path.
         maven "maven"
     }
-
-  stages {
-        stage('Build, Test and Package') {
+    
+    stages {
+        stage('Test') {
             steps {
                 // Run Maven on a Unix agent.
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                sh "mvn test"
             }
             post {
                 // If Maven was able to run the tests, even if some of the test
