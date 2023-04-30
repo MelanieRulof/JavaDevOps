@@ -38,6 +38,7 @@ pipeline {
         }
         stage('Push image on Docker registry') {
             steps {
+		    //possible de supprimer l'image avant de la reconstruire
                 sh 'docker login -u demonshrous -p IsikaAL21'
                 sh 'docker push demonshrous/docker-java-devops'
             }
