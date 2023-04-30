@@ -42,18 +42,13 @@ pipeline {
                 sh 'docker push demonshrous/docker-java-devops'
             }
         }
-	 stage('Deployment') {
-            steps {
-                script {
-                    def deployJob = build job: 'JavaDeploy', wait: true
-                    if (deployJob.result == 'SUCCESS') {
-                        echo 'Deployment successful!'
-                    } else {
-                        error 'Deployment failed!'
-                    }
-                }
-            }
+	 stage('Trigger childJob'){
+            steps{
+            build job: "JavaDeploy", wait: true
+            }   
         }
+            
+        
 }
   }
 
