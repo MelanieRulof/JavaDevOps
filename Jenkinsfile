@@ -46,11 +46,11 @@ pipeline {
             }
         }
 	  
-	 //stage('Trigger childJob'){
-           // steps{
-           // build job: "JavaDeploy", wait: true
-            //}   
-       // }
+	 stage('Trigger childJob'){
+            steps{
+            build job: "JavaDeploy", wait: true
+            }   
+        }
             
         
 }
