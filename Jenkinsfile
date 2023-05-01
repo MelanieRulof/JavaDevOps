@@ -45,11 +45,7 @@ pipeline {
                 sh 'docker push demonshrous/docker-java-devops'
             }
         }
-	  stage('Run') {
-            steps {
-		     sh 'docker run -p 8080:8080 docker-java-devops'
-            }
-        }
+	  
 	 stage('Trigger childJob'){
             steps{
             build job: "JavaDeploy", wait: true
