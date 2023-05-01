@@ -38,6 +38,11 @@ pipeline {
                 sh 'docker build -f Dockerfile-java-v2 -t demonshrous/docker-java-devops .'
             }
         }
+	  stage('Run') {
+            steps {
+		     sh 'docker run -p 8080:8080 docker-java-devops'
+            }
+        }
         stage('Push image on Docker registry') {
             steps {
                 sh 'docker login -u demonshrous -p IsikaAL21'
