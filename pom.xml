@@ -31,11 +31,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-  <groupId>com.github.kronostechnologies</groupId>
-  <artifactId>ngrok-client</artifactId>
-  <version>2.2.8</version>
-</dependency>
+	
+  <dependency>
+        <groupId>com.github.mageddo</groupId>
+        <artifactId>ngrok-api-client</artifactId>
+        <version>2.2.8</version>
+    </dependency>
+
 
 	</dependencies>
 
