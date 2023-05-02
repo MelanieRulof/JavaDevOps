@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.isika.javadevops.model.Person;
 
 @Controller
-@RequestMapping
+@RequestMapping("/")
 public class nomController {
 	
 	@GetMapping("/")
