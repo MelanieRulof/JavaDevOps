@@ -13,7 +13,7 @@ import fr.isika.javadevops.model.Person;
 
 @Controller
 @RequestMapping("/")
-public class nomController {
+public class nomController  {
 	
 	@GetMapping("/")
 	public String name(Model model) throws Exception {	
