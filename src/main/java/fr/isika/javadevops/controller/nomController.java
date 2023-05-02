@@ -23,7 +23,7 @@ public class nomController {
 	}
 	
 	
-	@PostMapping("/returnName")
+	@GetMapping("/returnName")
 	public String returnName(@RequestParam("name") String name, Model model) {
 		
 //		message = "Bonjour " + name + " ... Vous êtes bien matinal ...";
