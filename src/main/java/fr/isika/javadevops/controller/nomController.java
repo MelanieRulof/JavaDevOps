@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.isika.javadevops.model.Person;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping
 public class nomController {
 	
 	@GetMapping("/")
@@ -23,7 +23,7 @@ public class nomController {
 	}
 	
 	
-	@GetMapping("/returnName")
+	@PostMapping("/returnName")
 	public String returnName(@RequestParam("name") String name, Model model) {
 		
 //		message = "Bonjour " + name + " ... Vous êtes bien matinal ...";
